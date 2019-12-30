@@ -3,7 +3,9 @@ import sys
 from requests import get
 
 access_key = "c0881b3c46a0a56b1812c95f9dfcafbd"
-
+if len(sys.argv) == 1:
+    print("You didn't enter a city name")
+    exit(-1)
 cities = sys.argv[1]
 cities = cities.replace(",", ";")
 citylist = cities.split(";")
