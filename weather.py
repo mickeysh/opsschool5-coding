@@ -8,7 +8,10 @@ from requests import get
 @click.option('--token')
 @click.option('--city')
 @click.option('--T', default='Celsius')
-def temperature(token, city, temp):
+def temperature(token, city, t):
+    if token == None:
+        print("You didn't enter an access key")
+        exit(-1)
     if city == None:
         print("You didn't enter a city name")
         exit(-1)
