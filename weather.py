@@ -22,7 +22,7 @@ def temperature(token, city, t):
     elif t == "Fahrenheit":
         units = "f"
     else:
-        print("Invalid degrees term :(")
+        print("Invalid degrees term. You should try Celsius or Fahrenheit")
         exit(-1)
 
     params = {
